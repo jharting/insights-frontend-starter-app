@@ -8,6 +8,7 @@ import { Card } from '@red-hat-insights/insights-frontend-components';
 import { CardContent } from '@red-hat-insights/insights-frontend-components';
 import { CardFooter } from '@red-hat-insights/insights-frontend-components';
 import { CardHeader } from '@red-hat-insights/insights-frontend-components';
+import { Link } from 'react-router-dom';
 import { PageHeader } from '@red-hat-insights/insights-frontend-components';
 import { PageHeaderTitle } from '@red-hat-insights/insights-frontend-components';
 import { PF3Button } from '@red-hat-insights/insights-frontend-components';
@@ -74,6 +75,7 @@ class SamplePage extends Component {
                                     sit cu, in reque vocibus assueverit sit. Eum te quando dolore, sea zril dicunt torquatos ei.
                                 </p>
                                 <br/>
+                                <Link to='/advisor/rules'>Rules</Link>
                                 <p>
                                     Eu tempor aliquam recusabo vis, sint singulis nec cu. Case nonumes efficiantur duo ei. Rebum
                                     rationibus complectitur pri ne, no mazim officiis usu, saepe feugait perpetua ex eam. Sed ne
