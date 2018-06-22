@@ -1,3 +1,5 @@
+/* global require, module, __dirname */
+
 const path = require('path');
 const entry = process.env.NODE_ENV === 'production' ?
     path.resolve(__dirname, '../src/entry.js') :
