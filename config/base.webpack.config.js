@@ -10,6 +10,7 @@ const webpackConfig = {
     devtool: false,
     optimization: {
         minimize: process.env.NODE_ENV === 'production',
+        /*
         splitChunks: {
             cacheGroups: {
                 vendors: false,
@@ -20,16 +21,24 @@ const webpackConfig = {
                 }
             }
         }
+        */
     },
     entry: {
-        App: config.paths.entry
+        App: config.paths.entry,
+        SystemModal: './src/SmartComponents/SystemModal/loader.js'
     },
     output: {
         filename: 'js/[name].js',
         path: config.paths.public,
         publicPath: '/insights/',
-        chunkFilename: 'js/[name].js'
+        chunkFilename: 'js/[name].js',
+        //libraryTarget: 'esm'
     },
+    /*
+    externals: {
+        'react': 'react',
+    },
+    */
     module: {
         rules: [{
             test: /\.js$/,

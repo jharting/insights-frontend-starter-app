@@ -24,7 +24,8 @@ plugins.push(WriteFileWebpackPlugin);
 const HtmlWebpackPlugin = new (require('html-webpack-plugin'))({
     title: 'My App',
     filename: 'index.html',
-    template: path.resolve(__dirname, '../src/index.html')
+    template: path.resolve(__dirname, '../src/index.html'),
+    excludeChunks: ['SystemModal']
 });
 plugins.push(HtmlWebpackPlugin);
 
