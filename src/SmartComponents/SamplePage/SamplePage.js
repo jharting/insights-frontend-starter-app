@@ -26,6 +26,11 @@ const SampleComponent = asyncComponent(() => import('../../PresentationalCompone
  */
 class SamplePage extends Component {
 
+    constructor (props) {
+        super(props);
+        this.history = props.history;
+    }
+
     render() {
         return (
             <React.Fragment>
@@ -44,7 +49,7 @@ class SamplePage extends Component {
                     </Card>
                     <h1> Buttons </h1>
                     <Section type='button-group'>
-                        <Button variant='primary'> PF-Next Primary Button </Button>
+                        <Button variant='primary' onClick={() => this.history.push('/inventory')}> PF-Next Primary Button </Button>
                         <Button variant='secondary'> PF-Next Secondary Button </Button>
                         <Button variant='tertiary'> PF-Next Tertiary Button </Button>
                         <Button variant='danger'> PF-Next Danger Button </Button>
